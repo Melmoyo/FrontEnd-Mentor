@@ -18,6 +18,7 @@ background-size:contain;
 .display-1{
     font-family: var(--heading-font);
     font-weight:400;
+	color:white;
 }
  .register-btn{
     color: hsl(257, 40%, 49%) !important ;
