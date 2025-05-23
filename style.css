@@ -21,7 +21,7 @@ header ,img{
 
 .register-btn{
     color: var(--primary-violet) !important;
-    background-color:var(--primary-soft-magenta)!important;
+    background:var(--primary-soft-magenta)!important;
 }
 
 @media screen and (min-width: 1440px){
