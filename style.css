@@ -24,7 +24,7 @@ header ,img{
     background:var(--primary-soft-magenta);
 }
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 90em){
     body{
 background-image:url("bg-desktop.svg");
 background-repeat:no-repeat;
