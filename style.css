@@ -6,8 +6,11 @@
     --heading-font: "Open Sans";
 }
 
-    
+    body{
+	color:white;
+}
 body{
+background-color: hsl(257, 40%, 49%) !important;
 background-image:url("bg-mobile.svg");
 background-repeat:no-repeat;
 background-size:contain;
@@ -16,17 +19,20 @@ background-size:contain;
     font-family: var(--heading-font);
     font-weight:400;
 }
-header ,img{
-    fill:black ;
+ .register-btn{
+    color: hsl(257, 40%, 49%) !important ;
+    background-color: white !important;
+	
 }
 
-.register-btn{
-    color: var(--primary-violet) ;
-    background:var(--primary-soft-magenta);
+.icon{
+	filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
+
 
 @media screen and (min-width: 90em){
     body{
+background-color: hsl(257, 40%, 49%) !important;
 background-image:url("bg-desktop.svg");
 background-repeat:no-repeat;
 background-size:contain;
