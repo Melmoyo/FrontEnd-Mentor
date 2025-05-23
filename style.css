@@ -1,4 +1,4 @@
---root{
+:root{
     --primary-violet: hsl(257, 40%, 49%);
     --primary-soft-magenta: hsl(300, 69%, 71%);
 
@@ -10,7 +10,7 @@
 	color:white;
 }
 body{
-background-color: hsl(257, 40%, 49%) !important;
+background-color: var( --primary-violet) ;
 background-image:url("bg-mobile.svg");
 background-repeat:no-repeat;
 background-size:contain;
@@ -21,8 +21,8 @@ background-size:contain;
 	color:white;
 }
  .register-btn{
-    color: hsl(257, 40%, 49%) !important ;
-    background-color: white !important;
+    color: var( --primary-violet)  ;
+    background-color: white;
 	
 }
 
@@ -33,7 +33,7 @@ background-size:contain;
 
 @media screen and (min-width: 90em){
     body{
-background-color: hsl(257, 40%, 49%) !important;
+background-color: var(--primary-violet);
 background-image:url("bg-desktop.svg");
 background-repeat:no-repeat;
 background-size:contain;
