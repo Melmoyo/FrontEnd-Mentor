@@ -1,6 +1,6 @@
 --root{
-    --primary-violet:hsl(257, 40%, 49%);
-    --primary-soft-magenta:hsl(300, 69%, 71%);
+    --primary-violet: hsl(257, 40%, 49%);
+    --primary-soft-magenta: hsl(300, 69%, 71%);
 
     --body-font: "Poppins";
     --heading-font: "Open Sans";
@@ -39,7 +39,5 @@ background-repeat:no-repeat;
 background-size:contain;
         
     }
-    html{
-        background-color:var(--primary-violet);
-    }
+   
 }
