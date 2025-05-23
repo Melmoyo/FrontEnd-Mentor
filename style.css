@@ -16,12 +16,12 @@ background-size:contain;
     font-weight:400;
 }
 header ,img{
-    fill:black !important;
+    fill:black ;
 }
 
 .register-btn{
-    color: var(--primary-violet) !important;
-    background:var(--primary-soft-magenta)!important;
+    color: var(--primary-violet) ;
+    background:var(--primary-soft-magenta);
 }
 
 @media screen and (min-width: 1440px){
