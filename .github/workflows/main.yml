@@ -1,0 +1,55 @@
+name: Deploy Subfolder to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main # Or 'master', or the branch your subfolder project resides in
+  workflow_dispatch: # Allows you to manually trigger the workflow
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout your repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js (if your project uses it)
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20 # Or your project's Node.js version
+          cache: 'npm' # Or 'yarn', 'pnpm'
+          cache-dependency-path: 'Clipboard-landing-page/package-lock.json' # Adjust path
+
+      - name: Install dependencies
+        run: npm ci # Or 'yarn install', 'pnpm install'
+        working-directory: ./Clipboard-landing-page # IMPORTANT: Run in your subfolder!
+
+      - name: Build project
+        run: npm run build # Or 'yarn build'
+        working-directory: ./Clipboard-landing-page # IMPORTANT: Run in your subfolder!
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './Clipboard-landing-page/public' # IMPORTANT: Path to your *built output* relative to repo root
+                                         # For example, if your build command in 'my-frontend-app'
+                                         # outputs to 'my-frontend-app/build', use './my-frontend-app/build'
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
