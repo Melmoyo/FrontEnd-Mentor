@@ -37,9 +37,8 @@ footer img{
 }
 
 @media screen and (min-width: 90em){
-    body{
-	background-color: var(--primary-violet) ;	
-background:url("bg-desktop.svg");
+    body{background-color: var(--primary-violet) ;	
+background-image:url("bg-desktop.svg");
 background-repeat:no-repeat;
 background-size:contain;
 
